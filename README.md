@@ -386,6 +386,8 @@ Bouncer emits five custom events:
 - `bouncerFormInvalid` is emitted on a form that fails validation.
 - `bouncerInitialized` is emitted when bouncer initializes.
 - `bouncerDestroy` is emitted when bouncer is destroyed.
+- `bouncerFieldValidated` is emitted when field is validated.
+- `bouncerFieldValid` is emitted when bfiedl is successfully validated.
 
 You can listen for these events with `addEventListener`. All five events bubble up the DOM. The `event.target` is the field or form (or document, when initializing and destroying).
 

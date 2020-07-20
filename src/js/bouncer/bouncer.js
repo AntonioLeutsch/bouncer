@@ -696,9 +696,16 @@
 			// Check for errors
 			var isValid = getErrors(field, _settings);
 
+			// Emit field is validated
+			emitEvent(field, "bouncerFieldValidated", {settings: _settings, isValid: isValid});
+
 			// If valid, remove any error messages
 			if (isValid.valid) {
 				removeError(field, _settings);
+
+				// Emit field is successfully validated
+				emitEvent(field, "bouncerFieldValid");
+				
 				return;
 			}
 
